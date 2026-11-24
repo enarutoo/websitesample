@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     startButton.addEventListener("click", () => {
         startButton.disabled = true;
-        startButton.innerHTML = "Let's Go! 💕";
+        startButton.innerHTML = "Let's Goal! 💕";
 
         welcomeCard.classList.add("leaving");
 
