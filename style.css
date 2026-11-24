@@ -1,0 +1,209 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: linear-gradient(135deg, #fff0f5, #ffe1eb, #fff5f8);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+}
+
+.welcome-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 55px 40px 35px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 182, 193, 0.5);
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(214, 112, 147, 0.15);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: appear 0.9s ease;
+}
+
+.small-heart {
+    font-size: 55px;
+    margin-bottom: 18px;
+    animation: heartbeat 1.8s infinite;
+}
+
+.welcome-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #d47b99;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: #b84d73;
+    margin: 15px 0;
+}
+
+.heart-divider {
+    color: #e99bb2;
+    font-size: 17px;
+    margin: 15px 0 25px;
+}
+
+.message {
+    font-size: 21px;
+    font-weight: 700;
+    color: #c45d80;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #987481;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ed8eae, #d95f8a);
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(217, 95, 138, 0.25);
+    transition: 0.3s ease;
+}
+
+.start-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(217, 95, 138, 0.35);
+}
+
+.start-button:active {
+    transform: scale(0.97);
+}
+
+.admin-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #bd7891;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.admin-link:hover {
+    color: #d94e80;
+}
+
+.footer-text {
+    margin-top: 35px;
+    color: #d3a0b1;
+    font-size: 12px;
+}
+
+.floating-hearts span {
+    position: absolute;
+    color: rgba(222, 116, 151, 0.25);
+    font-size: 35px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+    top: 15%;
+    left: 15%;
+}
+
+.floating-hearts span:nth-child(2) {
+    top: 20%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(3) {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(4) {
+    bottom: 15%;
+    right: 18%;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(5) {
+    top: 50%;
+    right: 8%;
+    animation-delay: 1.5s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-card {
+        padding: 45px 25px 30px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .message {
+        font-size: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
