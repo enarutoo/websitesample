@@ -1,39 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#fff0f5">
+    <meta name="description" content="A special place for planning beautiful memories together.">
+
     <title>My Special Dates 💕</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="page">
+    <main class="page">
 
-        <div class="card welcome-card">
+        <div class="floating-hearts" aria-hidden="true">
+            <span>♡</span>
+            <span>💕</span>
+            <span>♡</span>
+            <span>💗</span>
+            <span>♡</span>
+        </div>
+
+        <section class="card welcome-card">
 
             <div class="small-heart">💕</div>
 
-            <h1>Pag filled up naman babyy</h1>
+            <span class="welcome-label">A LITTLE SOMETHING SPECIAL</span>
+
+            <h1>My Special Dates</h1>
+
+            <div class="heart-divider">♡ ─── ♡</div>
+
+            <p class="message">
+                Pag filled up naman, babyy!
+            </p>
 
             <p class="subtitle">
                 WHAHAHAHHHAHAHAHAHA
+                <br>
+                Let's make more beautiful memories together.
             </p>
 
-            <button onclick="window.location.href='beautiful.html'">
-                Start Planning 💗
+            <button
+                type="button"
+                class="start-button"
+                onclick="window.location.href='beautiful.html'">
+                Start Planning <span>💗</span>
             </button>
 
             <a class="admin-link" href="admin.html">
-                🔐 Admin Login
+                <span>🔐</span> Admin Login
             </a>
 
-        </div>
+            <div class="footer-text">
+                Made with love ♡
+            </div>
 
-    </div>
+        </section>
+
+    </main>
 
 </body>
 </html>
